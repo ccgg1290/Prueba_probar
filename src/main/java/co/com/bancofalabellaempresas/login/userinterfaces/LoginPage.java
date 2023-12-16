@@ -1,6 +1,8 @@
 package co.com.bancofalabellaempresas.login.userinterfaces;
 
 
+import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
@@ -17,6 +19,9 @@ public class LoginPage extends  PageObject{
 
     public static final Target NAVEGADOR = Target.the("navegador")
             .located(By.id("download-info-product"));
+
+@FindBy(id="download-info-product")
+public static WebElementFacade NAVEGADOR1;
 
 
 

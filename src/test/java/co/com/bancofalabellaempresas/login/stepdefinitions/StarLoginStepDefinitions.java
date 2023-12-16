@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import static co.com.bancofalabellaempresas.login.userinterfaces.LoginPage.NAVEGADOR;
+import static co.com.bancofalabellaempresas.login.userinterfaces.LoginPage.NAVEGADOR1;
 import static net.serenitybdd.core.Serenity.getDriver;
 import static org.junit.Assert.assertEquals;
 public class StarLoginStepDefinitions {
@@ -59,8 +61,11 @@ public class StarLoginStepDefinitions {
     }
     @Then("See my name in the home page")
     public void SeeMyNameInTheHomePage() {
-        // assertEquals(NAME_HOME.getText(), "Dayana Andrea Rojas Alba");
-        System.out.println("sirvio");
+        System.out.println("Target"+NAVEGADOR.getName());
+        System.out.println("Target"+NAVEGADOR.getName());
+        System.out.println("find by"+NAVEGADOR1.getText());
+         assertEquals(NAVEGADOR1.getText(), "Firefox Beta");
+        //System.out.println("sirvio");
     }
 
 }
